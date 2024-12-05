@@ -5,10 +5,13 @@ import java.util.ArrayList;
 public class Book {
     private String title;
     private int pages;
-    private ArrayList<String> authors;
+    private String[] authors;
     private String gender;
 
-    public Book(String title, int pages, ArrayList<String> authors, String gender) {
+    public Book() {
+    }
+
+    public Book(String title, int pages, String[] authors, String gender) {
         this.title = title;
         this.pages = pages;
         this.authors = authors;
@@ -21,7 +24,7 @@ public class Book {
     public int getPages() {
         return pages;
     }
-    public ArrayList<String> getAuthors() {
+    public String[] getAuthors() {
         return authors;
     }
     public String getGender() {
@@ -33,10 +36,20 @@ public class Book {
     public void setPages(int pages) {
         this.pages = pages;
     }
-    public void setAuthors(ArrayList<String> authors) {
+    public void setAuthors(String[] authors) {
         this.authors = authors;
     }
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", pages=" + pages +
+                ", authors=" + authors +
+                ", gender='" + gender + '\'' +
+                '}';
     }
 }

@@ -1,4 +1,4 @@
-import hw1.Car;
+package hw1;
 
 import java.util.ArrayList;
 
@@ -18,6 +18,12 @@ public class Main {
         cars.add(car5);
 
         System.out.println(cars);
-
         }
-    }
+
+    Book book1 = new Book("Parfnoth", 15, new String[]{"author1", "author2"}, "male");
+
+    Dog[] dogs = new Dog[]{
+            new Dog("Dodo",10, "kolye"),
+            new Dog("Dodo2",202, "kolye2"),
+    };
+}

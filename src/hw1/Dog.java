@@ -1,6 +1,7 @@
 package hw1;
 
 public class Dog {
+
     private String name;
     private int age;
     private String breed;
@@ -34,4 +35,13 @@ public class Dog {
     public void setBreed(String breed) {
         this.breed = breed;
     }
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", breed='" + breed + '\'' +
+                '}';
+    }
+
 }
