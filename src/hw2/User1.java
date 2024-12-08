@@ -13,7 +13,7 @@ public class User1 {
 
     @Data
     @Builder
-    public class Address{
+    public static class Address{
         private String street;
         private String suite;
         private String city;
