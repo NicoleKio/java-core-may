@@ -1,6 +1,11 @@
 package hw2;
 
 import hw1.Car;
+import hw2.less2.Gender;
+import hw2.less2.User1;
+import hw2.less2.User2;
+import hw2.less3.Ultrabook;
+import hw2.less3.Workstation;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -71,6 +76,28 @@ public class Main2 {
 
         System.out.println(Dalia);
     }
+
+
+//    Запакувати всі пости в список,всі коментарі в свій окремий список
+//    Проітерувати списки, і додати коментар з відповідним ід до відповідного поста
+//
+//    В постах додатково потрібно додати поле яке характеризує список комментарів.
+
+
+//    Створити та описати наступну їєрархію
+//    PC-Laptop-Ultrabook
+//    PC-Laptop- Workstation
+//    Загальна кількість вкористаних класів - 4!
+
+    Ultrabook item1 = new Ultrabook(1, "3enf", "rr3");
+    Workstation item2 = new Workstation(2, "78enf", "r76777tgr3");
+//    Workstation item6 = Workstation.builder()
+//            .
+//            .build();
+    Workstation item5 = new Workstation(7, "7897878nf", "r87677hr3");
+
+
+
 
 
 

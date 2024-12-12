@@ -1,10 +1,8 @@
-package hw2;
+package hw2.less2;
 
 import hw1.Car;
 import lombok.Builder;
 import lombok.Data;
-
-import javax.swing.*;
 
 @Data
 @Builder
