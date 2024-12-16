@@ -1,11 +1,12 @@
 package hw5.lesson_code;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.averagingDouble;
-import static java.util.stream.Collectors.toSet;
+import static java.util.function.Function.identity;
+import static java.util.stream.Collectors.*;
 
 public class DemoStreamAPI {
     public static void main(String[] args) {
@@ -35,7 +36,20 @@ public class DemoStreamAPI {
         System.out.println("Unique letters: " + uniqueLetters(people));
         System.out.println("All hobbies: " + allHobbies(people));
 
+        Map<String, Person> peopleByName = groupPeopleByName(people);
+        System.out.println("People by name: " + peopleByName);
+
+        double midAge = peopleByName.entrySet().stream()
+                .map(Map.Entry::getValue)
+                .mapToDouble(Person::getAge)
+                .average().orElse(0);
+        System.out.println("People mid age is " + midAge);
     }
+
+    private static Map<String, Person> groupPeopleByName(List<Person> people) {
+        return people.stream().collect(toMap(Person::getName, identity()));
+    }
+
 
     private static List<String> allHobbies(List<Person> people) {
         return people.stream()
